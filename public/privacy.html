@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy | C3 Code</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #f6f8fb;
+        --panel: #ffffff;
+        --text: #1f2937;
+        --muted: #667085;
+        --line: #d9e1ec;
+        --accent: #1967d2;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #151a21;
+          --panel: #202734;
+          --text: #eef2f7;
+          --muted: #a9b4c2;
+          --line: #374151;
+          --accent: #8ab4f8;
+        }
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background: var(--bg);
+        color: var(--text);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      main {
+        width: min(760px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 56px 0;
+      }
+
+      article {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--panel);
+        padding: 32px;
+        box-shadow: 0 18px 50px rgb(15 23 42 / 0.12);
+      }
+
+      a {
+        color: var(--accent);
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(2rem, 5vw, 3.25rem);
+        line-height: 1;
+        letter-spacing: 0;
+      }
+
+      h2 {
+        margin-top: 28px;
+        font-size: 1.15rem;
+      }
+
+      p,
+      li {
+        color: var(--muted);
+        font-size: 1rem;
+        line-height: 1.7;
+      }
+
+      ul {
+        padding-left: 1.2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <article>
+        <a href="/">Back to map</a>
+        <h1>Privacy Policy</h1>
+        <p>Last updated: May 20, 2026</p>
+
+        <h2>What C3 Code Processes</h2>
+        <p>
+          C3 Code converts map clicks, pasted coordinates, C3 codes, and H3 indexes into geospatial cell data in your
+          browser. Location search input is used only to update the current map view.
+        </p>
+
+        <h2>Location Permission</h2>
+        <p>
+          If you use the locate button, your browser may ask for location permission. The resulting coordinate is used
+          to move the map and calculate the current C3/H3 cell.
+        </p>
+
+        <h2>Third-Party Map Services</h2>
+        <p>
+          Map tiles and reverse geocoding may be requested from third-party providers. Those providers can receive
+          request metadata such as IP address, approximate map area, and user agent.
+        </p>
+
+        <h2>Local Storage</h2>
+        <p>
+          The app stores your light or dark theme preference in browser local storage. It does not require an account.
+        </p>
+
+        <h2>Contact</h2>
+        <p>
+          For privacy questions, update this page with the production contact address before launch.
+        </p>
+      </article>
+    </main>
+  </body>
+</html>

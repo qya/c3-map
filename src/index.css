@@ -1,0 +1,213 @@
+@import 'maplibre-gl/dist/maplibre-gl.css';
+@import "@fontsource-variable/inter";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@layer base {
+  .theme {
+    --font-heading: var(--font-sans);
+    --font-sans: 'Inter Variable', sans-serif;
+  }
+  :root {
+    --background: oklch(0.985 0.004 252);
+    --foreground: oklch(0.23 0.012 252);
+    --card: oklch(0.99 0.003 252);
+    --card-foreground: oklch(0.23 0.012 252);
+    --popover: oklch(0.99 0.003 252);
+    --popover-foreground: oklch(0.23 0.012 252);
+    --primary: oklch(0.57 0.19 255);
+    --primary-foreground: oklch(0.985 0.004 252);
+    --secondary: oklch(0.95 0.006 252);
+    --secondary-foreground: oklch(0.28 0.018 252);
+    --muted: oklch(0.95 0.006 252);
+    --muted-foreground: oklch(0.48 0.012 252);
+    --accent: oklch(0.94 0.016 252);
+    --accent-foreground: oklch(0.28 0.018 252);
+    --destructive: oklch(0.577 0.245 27.325);
+    --border: oklch(0.88 0.006 252);
+    --input: oklch(0.88 0.006 252);
+    --ring: oklch(0.57 0.19 255);
+    --chart-1: oklch(0.87 0 0);
+    --chart-2: oklch(0.556 0 0);
+    --chart-3: oklch(0.439 0 0);
+    --chart-4: oklch(0.371 0 0);
+    --chart-5: oklch(0.269 0 0);
+    --radius: 0.625rem;
+    --sidebar: oklch(0.99 0.003 252);
+    --sidebar-foreground: oklch(0.27 0.012 252);
+    --sidebar-primary: oklch(0.57 0.19 255);
+    --sidebar-primary-foreground: oklch(0.985 0.004 252);
+    --sidebar-accent: oklch(0.95 0.006 252);
+    --sidebar-accent-foreground: oklch(0.28 0.018 252);
+    --sidebar-border: oklch(0.88 0.006 252);
+    --sidebar-ring: oklch(0.57 0.19 255);
+    --map-search: oklch(0.975 0.004 252);
+    --map-search-foreground: oklch(0.25 0.01 252);
+    --map-search-muted: oklch(0.5 0.01 252);
+  }
+  .dark {
+    --background: oklch(0.18 0.013 252);
+    --foreground: oklch(0.94 0.006 252);
+    --card: oklch(0.235 0.015 252);
+    --card-foreground: oklch(0.94 0.006 252);
+    --popover: oklch(0.235 0.015 252);
+    --popover-foreground: oklch(0.94 0.006 252);
+    --primary: oklch(0.7 0.17 255);
+    --primary-foreground: oklch(0.16 0.012 252);
+    --secondary: oklch(0.28 0.017 252);
+    --secondary-foreground: oklch(0.94 0.006 252);
+    --muted: oklch(0.28 0.017 252);
+    --muted-foreground: oklch(0.71 0.009 252);
+    --accent: oklch(0.31 0.02 252);
+    --accent-foreground: oklch(0.94 0.006 252);
+    --destructive: oklch(0.704 0.191 22.216);
+    --border: oklch(0.38 0.014 252);
+    --input: oklch(0.38 0.014 252);
+    --ring: oklch(0.7 0.17 255);
+    --chart-1: oklch(0.87 0 0);
+    --chart-2: oklch(0.556 0 0);
+    --chart-3: oklch(0.439 0 0);
+    --chart-4: oklch(0.371 0 0);
+    --chart-5: oklch(0.269 0 0);
+    --sidebar: oklch(0.22 0.014 252);
+    --sidebar-foreground: oklch(0.9 0.006 252);
+    --sidebar-primary: oklch(0.7 0.17 255);
+    --sidebar-primary-foreground: oklch(0.16 0.012 252);
+    --sidebar-accent: oklch(0.28 0.017 252);
+    --sidebar-accent-foreground: oklch(0.94 0.006 252);
+    --sidebar-border: oklch(0.38 0.014 252);
+    --sidebar-ring: oklch(0.7 0.17 255);
+    --map-search: oklch(0.31 0.012 252);
+    --map-search-foreground: oklch(0.9 0.006 252);
+    --map-search-muted: oklch(0.67 0.008 252);
+  }
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
+  }
+  .maplibregl-popup-content {
+    padding: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+  .maplibregl-popup-tip {
+    display: none !important;
+  }
+  .maplibregl-ctrl-bottom-right {
+    right: 0.5rem;
+    bottom: 0.5rem;
+  }
+  .maplibregl-ctrl-attrib {
+    color: var(--foreground);
+    background-color: var(--map-search);
+  }
+  .maplibregl-ctrl-attrib-inner {
+    color: var(--foreground);
+  }
+  .maplibregl-ctrl-attrib-inner a {
+    color: var(--primary);
+  }
+}
+
+.plus-code-mark {
+  display: grid;
+  grid-template-columns: repeat(3, 0.42rem);
+  grid-template-rows: repeat(3, 0.42rem);
+  gap: 0.33rem;
+  width: 2.1rem;
+  height: 2.1rem;
+  align-content: center;
+}
+
+.plus-code-mark span {
+  border-radius: 999px;
+  background: oklch(0.63 0.2 255);
+}
+
+.plus-code-mark span:nth-child(1) {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.plus-code-mark span:nth-child(2) {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.plus-code-mark span:nth-child(3) {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.plus-code-mark span:nth-child(4) {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+/* Animations (replaces tw-animate-css) */
+@layer utilities {
+  .animate-in {
+    animation-name: enter;
+    animation-duration: 200ms;
+    animation-fill-mode: both;
+  }
+  .animate-out {
+    animation-name: exit;
+    animation-duration: 200ms;
+    animation-fill-mode: both;
+  }
+  .fade-in-0 { --tw-enter-opacity: 0; }
+  .fade-out-0 { --tw-exit-opacity: 0; }
+  .zoom-in-95 { --tw-enter-scale: 0.95; }
+  .zoom-out-95 { --tw-exit-scale: 0.95; }
+
+  @keyframes enter {
+    from {
+      opacity: var(--tw-enter-opacity, 1);
+      transform: translate3d(
+        var(--tw-enter-translate-x, 0),
+        var(--tw-enter-translate-y, 0),
+        0
+      ) scale3d(
+        var(--tw-enter-scale, 1),
+        var(--tw-enter-scale, 1),
+        var(--tw-enter-scale, 1)
+      );
+    }
+  }
+  @keyframes exit {
+    to {
+      opacity: var(--tw-exit-opacity, 1);
+      transform: translate3d(
+        var(--tw-exit-translate-x, 0),
+        var(--tw-exit-translate-y, 0),
+        0
+      ) scale3d(
+        var(--tw-exit-scale, 1),
+        var(--tw-exit-scale, 1),
+        var(--tw-exit-scale, 1)
+      );
+    }
+  }
+}
